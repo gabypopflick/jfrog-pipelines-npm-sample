@@ -35,7 +35,7 @@ pipelines:
         type: NpmPublish
         configuration:
           # for payloadType npm:
-          repositoryName: jfrogpipelines        # required, npm repository name on artifactory
+          repositoryName: default-npm-virtual        # required, npm repository name on artifactory
           autoPublishBuildInfo: true       # optional
           integrations:
             - name: gaby_artifactory     # required
