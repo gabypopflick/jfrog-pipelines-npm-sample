@@ -27,7 +27,7 @@ pipelines:
           repositoryName: artifactory     # required, npm repository name on artifacctory
           sourceLocation: .      # required, location of package.json file
           integrations:
-            - name:  demoArt  # required
+            - name:  gaby_artifactory  # required
           inputResources:
             - name: npm_repo_jfp_example         # required
 
@@ -35,10 +35,10 @@ pipelines:
         type: NpmPublish
         configuration:
           # for payloadType npm:
-          repositoryName: npm-virtual        # required, npm repository name on artifactory
+          repositoryName: jfrogpipelines        # required, npm repository name on artifactory
           autoPublishBuildInfo: true       # optional
           integrations:
-            - name: demoArt      # required
+            - name: gaby_artifactory     # required
           inputSteps:
             - name: npm_build_step                # required
           outputResources:
