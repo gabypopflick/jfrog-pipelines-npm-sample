@@ -24,7 +24,7 @@ pipelines:
       - name: npm_build_step
         type: NpmBuild
         configuration:
-          repositoryName: artifactory     # required, npm repository name on artifacctory
+          repositoryName: gaby_artifactory     # required, npm repository name on artifacctory
           sourceLocation: .      # required, location of package.json file
           integrations:
             - name:  gaby_artifactory  # required
