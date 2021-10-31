@@ -16,7 +16,7 @@ resources:
   - name: npm_buildinfo_jfp_example
     type: BuildInfo
     configuration:
-      sourceArtifactory: gaby_artifactory
+      sourceArtifactory: default-npm-virtual
 
 pipelines:
   - name: npm_pipeline_jfp_example
@@ -24,7 +24,7 @@ pipelines:
       - name: npm_build_step
         type: NpmBuild
         configuration:
-          repositoryName: jfrogpipelines     # required, npm repository name on artifacctory
+          repositoryName: default-npm-virtual    # required, npm repository name on artifacctory
           sourceLocation: .      # required, location of package.json file
           integrations:
             - name:  gaby_artifactory  # required
